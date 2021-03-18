@@ -1,0 +1,12 @@
+<mat-accordion *ngIf="books.length > 0">
+  <mat-expansion-panel *ngFor="let book of books">
+    <mat-expansion-panel-header>
+      Title: {{ book.title }}
+    </mat-expansion-panel-header>
+    <p>Author: {{ book.author }}</p>
+    <p>Pages: {{ book.pages }}</p>
+  </mat-expansion-panel>
+</mat-accordion>
+<p *ngIf="books.length <= 0" class="mat-body-1" style="text-align: center">
+  Any books created already
+</p>
